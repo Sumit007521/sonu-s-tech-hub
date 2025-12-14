@@ -1,13 +1,38 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { Helmet } from "react-helmet-async";
+import Navbar from "@/components/Navbar";
+import HeroSection from "@/components/HeroSection";
+import AboutSection from "@/components/AboutSection";
+import SkillsSection from "@/components/SkillsSection";
+import ProjectsSection from "@/components/ProjectsSection";
+import ContactSection from "@/components/ContactSection";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
-    </div>
+    <>
+      <Helmet>
+        <title>Sonu Kumar | DevOps Engineer & GitHub Automation Expert</title>
+        <meta
+          name="description"
+          content="Sonu Kumar is a DevOps Engineer specializing in GitHub workflows, GitHub Actions, and automation. Currently pursuing M.Tech at BITS Pilani."
+        />
+        <meta
+          name="keywords"
+          content="DevOps, GitHub, GitHub Actions, Automation, React, JavaScript, BITS Pilani"
+        />
+        <link rel="canonical" href="https://sonukumar.dev" />
+      </Helmet>
+
+      <main className="min-h-screen bg-background">
+        <Navbar />
+        <HeroSection />
+        <AboutSection />
+        <SkillsSection />
+        <ProjectsSection />
+        <ContactSection />
+        <Footer />
+      </main>
+    </>
   );
 };
 
